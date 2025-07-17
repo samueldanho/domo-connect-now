@@ -4,8 +4,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { AuthModal } from "@/components/AuthModal";
 import { Wrench, Users, Star, Shield, Clock, MapPin, LogIn, UserPlus } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
-import { Link } from "react-router-dom";
-import logoRed from "@/assets/logo-red.png";
+import logo from "@/assets/logo.png";
 
 const Index = () => {
   const services = [
@@ -18,7 +17,7 @@ const Index = () => {
   const features = [
     { icon: Clock, title: "Disponible 24h/7j", description: "Des professionnels toujours prêts à intervenir" },
     { icon: Star, title: "Professionnels certifiés", description: "Tous nos prestataires sont vérifiés et qualifiés" },
-    { icon: MapPin, title: "Partout en Côte d'Ivoire", description: "Service disponible dans toute la Côte d'Ivoire" },
+    { icon: MapPin, title: "Partout en France", description: "Service disponible dans toute la France" },
     { icon: Shield, title: "Paiement sécurisé", description: "Transactions protégées et garanties" },
   ];
 
@@ -29,7 +28,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-3">
-              <img src={logoRed} alt="DOMO" className="h-10 w-10" />
+              <img src={logo} alt="DOMO" className="h-10 w-10" />
               <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                 DOMO
               </span>
@@ -69,11 +68,11 @@ const Index = () => {
                 dépannage et aménagement. Simple, rapide et sécurisé.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link to="/search">
+                <AuthModal>
                   <Button size="lg" variant="hero" className="text-lg px-8 py-6">
                     Trouver un professionnel
                   </Button>
-                </Link>
+                </AuthModal>
                 <AuthModal>
                   <Button size="lg" variant="accent" className="text-lg px-8 py-6">
                     Devenir prestataire
@@ -167,11 +166,11 @@ const Index = () => {
           <p className="text-xl text-white/90 mb-8">
             Rejoignez des milliers de clients satisfaits qui ont trouvé leur professionnel sur DOMO
           </p>
-          <Link to="/search">
+          <AuthModal>
             <Button size="lg" variant="secondary" className="text-lg px-8 py-6">
               Créer mon compte gratuitement
             </Button>
-          </Link>
+          </AuthModal>
         </div>
       </section>
 
@@ -179,7 +178,7 @@ const Index = () => {
       <footer className="bg-foreground text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
           <div className="flex items-center justify-center space-x-3 mb-6">
-            <img src={logoRed} alt="DOMO" className="h-8 w-8" />
+            <img src={logo} alt="DOMO" className="h-8 w-8 brightness-0 invert" />
             <span className="text-2xl font-bold">DOMO</span>
           </div>
           <p className="text-white/70 max-w-2xl mx-auto">
